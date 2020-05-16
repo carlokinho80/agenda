@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Agenda</title>
+    <title>agenda</title>
 </head>
 <body>
     <h2>Agendamentos</h2>
 
-    <ul>
-     {% for evento in evento %}
-         <li>{{ evento.titulo }} - {{ evento.data_eventos}}</li>
-      {% endfor %}
+    <ul style="font-size: 18px">
+        {% for evento in eventos %} <!-- aceita comandos python entre chaves e porcentagem -->
+            <li>{{ evento.titulo }} - {{ evento.get_data_evento }}</li>
+        {% endfor %}
     </ul>
+
 </body>
 </html>
